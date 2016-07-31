@@ -1,3 +1,8 @@
+<% content_for(:head) do %>
+	<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.26.1/handsontable.full.js" %>
+	<%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.26.1/handsontable.full.css" %>
+<% end %>
+
 <section>
 	<h1>Multi-User Spreadsheet Demo</h1>
 	<p>
@@ -10,4 +15,7 @@
 	<h2>Active users</h2>
 	<ul id="active_users_list">
 	</ul>
+</section>
+
+<section id="spreadsheet">
 </section>
