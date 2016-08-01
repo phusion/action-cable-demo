@@ -8,5 +8,5 @@ App.active_users = App.cable.subscriptions.create "ActiveUsersChannel",
       App.spreadsheet.set_current_user(data.current_user)
 
   select_cells: (cells) ->
-    @perform('select_cells', cells)
+    @perform('select_cells', selected_cells: cells)
 

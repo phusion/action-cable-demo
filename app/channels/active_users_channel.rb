@@ -13,9 +13,6 @@ class ActiveUsersChannel < ApplicationCable::Channel
   end
 
   def select_cells(message)
-    # TODO: validate cells
-    message.delete :action
-    @user.selected_cells = message
-    @user.save
+    @user.update! selected_cells: message['selected_cells']
   end
 end
