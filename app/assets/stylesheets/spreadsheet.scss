@@ -1,3 +1,20 @@
 // Place all the styles related to the spreadsheet controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin colored-border($color) {
+	box-shadow:inset 0px 0px 0px 2px $color;
+}
+
+.user-1 { @include colored-border(#33a02c);}
+.user-2 { @include colored-border(#e31a1c);}
+.user-3 { @include colored-border(#ff7f00);}
+.user-4 { @include colored-border(#6a3d9a);}
+.user-5 { @include colored-border(#b15928);}
+.user-6 { @include colored-border(#a6cee3);}
+.user-7 { @include colored-border(#b2df8a);}
+.user-8 { @include colored-border(#fb9a99);}
+.user-9 { @include colored-border(#fdbf6f);}
+.user-10 { @include colored-border(#cab2d6);}
+.user-11 { @include colored-border(#ffff99);}
+.user-12 { @include colored-border(#1f78b4);}

@@ -1,4 +1,4 @@
 class User
   include NoBrainer::Document
-  field :selected_cell
+  field :selected_cells
 end
