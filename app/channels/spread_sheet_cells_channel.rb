@@ -7,15 +7,7 @@ class SpreadSheetCellsChannel < ApplicationCable::Channel
   end
 
   def set_cell_value(message)
-    if cell = SpreadsheetCell.where(
-         location: message['location']
-       ).first
-      cell.update! value: message['value'] 
-    else
-      cell = SpreadsheetCell.create(
-        location: message['location'],
-        value: message['value']
-      )
-    end
+    location = message['location']
+    SpreadsheetCell.upsert! location: location, value: message['value']
   end
 end

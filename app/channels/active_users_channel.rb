@@ -15,4 +15,20 @@ class ActiveUsersChannel < ApplicationCable::Channel
   def select_cells(message)
     @user.update! selected_cells: message['selected_cells']
   end
+
+  def lock_cell(message)
+    location = [message['location']['r'],message['location']['c']]
+    result = @user.lock_cell(location)
+    if result["inserted"] == 1
+      Rails.logger.info "Lock acquired by #{@user.id} on #{location}"
+    elsif result["unchanged"] = 1
+      Rails.logger.info "Lock refused to #{@user.id} on #{location}"
+    else
+      Rails.logger.info "Unknown result for lock: #{result.inspect}"
+    end
+  end
+
+  def unlock_cell(message)
+    @user.unlock_cell
+  end
 end

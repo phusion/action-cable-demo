@@ -86,7 +86,7 @@ GEM
       middleware (~> 0.1.0)
       rethinkdb (>= 2.1.0)
       symbol_decoration (~> 1.1)
-    nobrainer_streams (0.1.0)
+    nobrainer_streams (0.2.0)
       rethinkdb (~> 2.3)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -174,7 +174,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   nobrainer
-  nobrainer_streams (~> 0.1)
+  nobrainer_streams (~> 0.2)
   puma (~> 3.0)
   rails (~> 5.0.0)
   sass-rails (~> 5.0)
