@@ -2,8 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	margin: 0 auto;
+	max-width: 50em;
+	font-family: "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  line-height: 1.5;
+  padding: 2em 2em;
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #eeeeee;
+}
+
+section {
+	background-color: #ffffff;
+	padding: 1em;
+	margin: .3em;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+}
+
 @mixin colored-border($color) {
 	box-shadow:inset 0px 0px 0px 2px $color;
+}
+
+#introduction {
+	 width: 100%;
+	 background-color: #3E50B4;
+	 color: #fff;
+}
+
+#active_users {
+	width: 14em;
+	order: 3;
+}
+
+#spreadsheet {
+	flex-grow: 1;
+	order: 2;
+	padding: 0;
+	overflow: hidden;
+	height: 30em;
 }
 
 .user-1 { @include colored-border(#33a02c);}
